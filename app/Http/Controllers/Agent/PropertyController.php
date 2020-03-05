@@ -45,12 +45,12 @@ class PropertyController extends Controller
             'bathroom'  => 'required',
             'city'      => 'required',
             'address'   => 'required',
+            'contact_person' => 'required',
+            'contact_phone' => 'required',
             'area'      => 'required',
             'image'     => 'required|image|mimes:jpeg,jpg,png',
             'floor_plan'=> 'image|mimes:jpeg,jpg,png',
-            'description'        => 'required',
-            'location_latitude'  => 'required',
-            'location_longitude' => 'required',
+            'description'        => 'required'
         ]);
 
         $image = $request->file('image');
@@ -95,6 +95,8 @@ class PropertyController extends Controller
         $property->city     = $request->city;
         $property->city_slug= str_slug($request->city);
         $property->address  = $request->address;
+        $property->contact_person = $request->contact_person;
+        $property->contact_phone = $request->contact_phone;
         $property->area     = $request->area;
 
         if(isset($request->featured)){
@@ -158,12 +160,12 @@ class PropertyController extends Controller
             'bathroom'  => 'required',
             'city'      => 'required',
             'address'   => 'required',
+            'contact_person' => 'required',
+            'contact_phone' => 'required',
             'area'      => 'required',
             'image'     => 'image|mimes:jpeg,jpg,png',
             'floor_plan'=> 'image|mimes:jpeg,jpg,png',
-            'description'        => 'required',
-            'location_latitude'  => 'required',
-            'location_longitude' => 'required'
+            'description'        => 'required'
         ]);
 
         $image = $request->file('image');
@@ -219,6 +221,8 @@ class PropertyController extends Controller
         $property->city     = $request->city;
         $property->city_slug= str_slug($request->city);
         $property->address  = $request->address;
+        $property->contact_person = $request->contact_person;
+        $property->contact_phone = $request->contact_phone;
         $property->area     = $request->area;
 
         if(isset($request->featured)){

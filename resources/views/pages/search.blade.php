@@ -122,7 +122,7 @@
                                     </div>
 
                                     <h5>
-                                        &dollar;{{ $property->price }}
+                                        {{ $property->price }} &euro;
                                         <small class="right">{{ $property->type }} for {{ $property->purpose }}</small>
                                     </h5>
 
@@ -138,12 +138,14 @@
                                     </span>
                                     <span class="btn-flat">
                                         <i class="material-icons">check_box</i>
-                                        Area: <strong>{{ $property->area}}</strong> Sq Ft
+                                        Area: <strong>{{ $property->area}}</strong> MP
                                     </span>
+                                    <!--
                                     <span class="btn-flat">
                                         <i class="material-icons">comment</i>
                                         {{ $property->comments_count}}
                                     </span>
+-->
 
                                     @if($property->featured == 1)
                                         <span class="right featured-stars">

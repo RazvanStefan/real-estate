@@ -67,6 +67,18 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="input-field col s4">
+                                    <i class="material-icons prefix">perm_contact_calendar</i>
+                                    <input id="contact_person" name="contact_person" type="text" value="{{$property->contact_person}}" class="validate">
+                                    <label for="contact_person">Nume de contact</label>
+                                </div>
+                                <div class="input-field col s8">
+                                    <i class="material-icons prefix">perm_phone_msg</i>
+                                    <textarea id="contact_phone" name="contact_phone" class="materialize-textarea">{{$property->contact_phone}}</textarea>
+                                    <label for="contact_phone">Telefon de contact</label>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="input-field col s3">
                                     <p>
                                         <label>

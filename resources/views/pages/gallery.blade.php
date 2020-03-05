@@ -18,7 +18,7 @@
                         <div class="col s12 m4">
                             <div class="card">
                                 <div class="card-image">
-                                    <span class="card-image-bg materialboxed" style="background-image:url({{Storage::url('gallery/'.$gallery->image)}});"></span>
+                                    <span class="card-image-bg materialboxed" style="background-image:url(../public/{{Storage::url('gallery/'.$gallery->image)}});"></span>
                                 </div>
                             </div>
                         </div>

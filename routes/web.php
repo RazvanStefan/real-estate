@@ -35,6 +35,8 @@ Auth::routes();
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admin'],'as'=>'admin.'], function(){
 
     Route::get('dashboard','DashboardController@index')->name('dashboard');
+    Route::delete('admin/delete_user/{id}','DashboardController@userDelete')->name('users.destroy');
+    Route::post('admin/make_agent/{id}','DashboardController@makeAgent')->name('users.make_agent');
     Route::resource('tags','TagController');
     Route::resource('categories','CategoryController');
     Route::resource('posts','PostController');

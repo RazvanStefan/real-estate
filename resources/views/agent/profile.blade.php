@@ -37,12 +37,17 @@
                             </div>
                             
                             <div class="row">
-                                <div class="input-field col s6">
+                                <div class="input-field col s4">
                                     <i class="material-icons prefix">email</i>
                                     <input id="email" name="email" type="email" value="{{ $profile->email }}" class="validate">
                                     <label for="email">Email</label>
                                 </div>
-                                <div class="file-field input-field col s6">
+                                <div class="input-field col s4">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="phone" name="phone" type="tel" value="{{ $profile->phone }}" class="validate">
+                                    <label for="phone">Telefon</label>
+                                </div>
+                                <div class="file-field input-field col s4">
                                     <div class="btn indigo">
                                         <span>Image</span>
                                         <input type="file" name="image">

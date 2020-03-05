@@ -76,7 +76,7 @@
                 </div>
                 <div class="col s12 m4">
                     <div>
-                        <h4 class="left">${{ $property->price }}</h4>
+                        <h4 class="left">{{ $property->price }} &euro;</h4>
                         <button type="button" class="btn btn-small m-t-25 right disabled b-r-20"> For {{ $property->purpose }}</button>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         </div>
                     @else
                         <div class="single-image">
-                            @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
+                            @if(Storage::disk('public')->exists('property/storage'.$property->image) && $property->image)
                                 <img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}" class="imgresponsive">
                             @endif
                         </div>
@@ -114,44 +114,13 @@
 
                     <div class="card-no-box-shadow card">
                         <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">Floor Plan</h5>
-                        </div>
-                        <div class="card-image">
-                            @if(Storage::disk('public')->exists('property/'.$property->floor_plan) && $property->floor_plan)
-                                <img src="{{Storage::url('property/'.$property->floor_plan)}}" alt="{{$property->title}}" class="imgresponsive">
-                            @endif
-                        </div>
-                    </div>
-
-                    <div class="card-no-box-shadow card">
-                        <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">Location</h5>
-                        </div>
-                        <div class="card-image">
-                            <div id="map"></div>
-                        </div>
-                    </div>
-
-                    @if($videoembed)
-                        <div class="card-no-box-shadow card">
-                            <div class="p-15 grey lighten-4">
-                                <h5 class="m-0">Video</h5>
-                            </div>
-                            <div class="card-image center m-t-10">
-                                {!! $videoembed !!}
-                            </div>
-                        </div>
-                    @endif
-
-                    <div class="card-no-box-shadow card">
-                        <div class="p-15 grey lighten-4">
                             <h5 class="m-0">Near By</h5>
                         </div>
                         <div class="single-narebay p-15">
                             {!! $property->nearby !!}
                         </div>
                     </div>
-
+<!--
                     <div class="card-no-box-shadow card">
                         <div class="p-15 grey lighten-4">
                             <h5 class="m-0">
@@ -229,7 +198,7 @@
                             
                         </div>
                     </div>
-
+-->
                 </div>
                 {{-- End ./COL M8 --}}
 
@@ -250,7 +219,8 @@
                                             <div class="card-stacked">
                                                 <div class="p-l-10 p-r-10">
                                                     <h5 class="m-t-b-0">{{ $property->user->name }}</h5>
-                                                    <strong>{{ $property->user->email }}</strong>
+                                                    <strong>{{ $property->user->email }}</strong></br>
+                                                    <strong>{{ $property->user->phone}} </strong>
                                                 </div>
                                             </div>
                                         </div>
@@ -313,7 +283,7 @@
                                 </li>
                                 @foreach($relatedproperty as $property_related)
                                     <li class="collection-item p-0">
-                                        <a href="{{ route('property.show',$property_related->id) }}">
+                                        <a href="{{ route('property.show',$property_related->slug) }}">
                                             <div class="card horizontal card-no-shadow m-0">
                                                 @if($property_related->image)
                                                 <div class="card-image">
@@ -323,7 +293,7 @@
                                                 <div class="card-stacked">
                                                     <div class="p-l-10 p-r-10 indigo-text">
                                                         <h6 title="{{$property_related->title}}">{{ str_limit( $property_related->title, 18 ) }}</h6>
-                                                        <strong>&dollar;{{$property_related->price}}</strong>
+                                                        <strong>{{$property_related->price}} &euro;</strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -513,27 +483,5 @@
             jssor_1_slider_init();
         @endif
 
-    </script>
-    <script>
-        function initMap() {
-            var propLatLng = {
-                lat: <?php echo $property->location_latitude; ?>,
-                lng: <?php echo $property->location_longitude; ?>
-            };
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: propLatLng
-            });
-
-            var marker = new google.maps.Marker({
-                position: propLatLng,
-                map: map,
-                title: '<?php echo $property->title; ?>'
-            });
-        }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRLaJEjRudGCuEi1_pqC4n3hpVHIyJJZA&callback=initMap">
     </script>
 @endsection

@@ -65,38 +65,39 @@
                     </a>
                 </li>
 
-                <li class="header"> </li>
+                <li class="header"> Administrativ </li>
+<!--
                 <li class="{{ Request::is('admin/galleries*') ? 'active' : '' }}">
                     <a href="{{ route('admin.album') }}">
                         <i class="material-icons">view_list</i>
                         <span>Gallery</span>
                     </a>
                 </li>
- 
+ -->
                 <li class="{{ Request::is('admin/settings*') ? 'active' : '' }}">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">settings</i>
-                        <span>Settings</span>
+                        <span>Setari</span>
                     </a>
                     <ul class="ml-menu">
                         <li class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                             <a href="{{ route('admin.settings') }}">
-                                <span>Settings</span>
+                                <span>Setari Site</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('admin/changepassword') ? 'active' : '' }}">
                             <a href="{{ route('admin.changepassword') }}">
-                                <span>Change Password</span>
+                                <span>Modifica Parola</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('admin/profile') ? 'active' : '' }}">
                             <a href="{{ route('admin.profile') }}">
-                                <span>Profile</span>
+                                <span>Profil</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('admin/message*') ? 'active' : '' }}">
                             <a href="{{ route('admin.message') }}">
-                                <span>Message</span>
+                                <span>Mesaje</span>
                             </a>
                         </li>
                     </ul>

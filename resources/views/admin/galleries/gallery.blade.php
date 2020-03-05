@@ -27,8 +27,8 @@
                     <div id="aniimated-thumbnials" class="list-unstyled row clearfix">
                         @foreach($galleries as $gallery)
                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                <a href="{{Storage::url('gallery/'.$gallery->image)}}" data-sub-html="Demo Description">
-                                    <img class="img-responsive thumbnail" src="{{Storage::url('gallery/'.$gallery->image)}}">
+                                <a href="../{{Storage::url('gallery/'.$gallery->image)}}" data-sub-html="Demo Description">
+                                    <img class="img-responsive thumbnail" src="{{Storage::url('../public/storage/gallery/'.$gallery->image)}}">
                                 </a>
                             </div>
                         @endforeach

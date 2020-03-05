@@ -41,6 +41,7 @@ class DashboardController extends Controller
             'name'      => 'required',
             'username'  => 'required',
             'email'     => 'required|email',
+            'phone'     => 'numeric',
             'image'     => 'image|mimes:jpeg,jpg,png',
             'about'     => 'max:250'
         ]);
@@ -62,11 +63,14 @@ class DashboardController extends Controller
             }
             $userimage = Image::make($image)->stream();
             Storage::disk('public')->put('users/'.$imagename, $userimage);
+        }else{
+            $imagename = $user->image;
         }
 
         $user->name = $request->name;
         $user->username = $request->username;
         $user->email = $request->email;
+        $user->phone = $request->phone;
         $user->image = $imagename;
         $user->about = $request->about;
 

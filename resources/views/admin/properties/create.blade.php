@@ -71,7 +71,21 @@
                             <input type="number" class="form-control" name="area" required>
                             <label class="form-label">Area</label>
                         </div>
-                        <div class="help-info">Square Feet</div>
+                        <div class="help-info">mp</div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="contact_person" required>
+                            <label class="form-label">Nume de contact</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="contact_phone" required>
+                            <label class="form-label">Telefon de contact</label>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -151,13 +165,13 @@
                         <h5>Google Map</h5>
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" name="location_latitude" class="form-control" required/>
+                                <input type="text" name="location_latitude" class="form-control"/>
                                 <label class="form-label">Latitude</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" name="location_longitude" class="form-control" required/>
+                                <input type="text" name="location_longitude" class="form-control"/>
                                 <label class="form-label">Longitude</label>
                             </div>
                         </div>

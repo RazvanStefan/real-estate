@@ -27,7 +27,7 @@
                                     <th>Title</th>
                                     <th>Type</th>
                                     <th>City</th>
-                                    <th><i class="material-icons small-star p-t-10">comment</i></th>
+                                    <th>Contact</th>
                                     <th><i class="material-icons small-star p-t-10">stars</i></th>
                                     <th>Action</th>
                                 </tr>
@@ -38,17 +38,13 @@
                                     <tr>
                                         <td class="right-align">{{$key+1}}.</td>
                                         <td>
-                                            <span class="tooltipped" data-position="bottom" data-tooltip="{{$property->title}}">
-                                                {{ str_limit($property->title,30) }}
-                                            </span>
+                                            <img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}" width="60" class="img-responsive img-rounded">
                                         </td>
                                         
                                         <td>{{ ucfirst($property->type) }}</td>
                                         <td>{{ ucfirst($property->city) }}</td>
 
-                                        <td class="center">
-                                            <span><i class="material-icons small-comment left">comment</i>{{ $property->comments_count }}</span>
-                                        </td>
+                                        <td class="">{{$property->contact_person}} </br> <b>Telefon:</b> {{$property->contact_phone}}</td>
 
                                         <td class="center">
                                             @if($property->featured == true)

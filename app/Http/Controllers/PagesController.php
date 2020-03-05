@@ -46,11 +46,11 @@ class PagesController extends Controller
                     ->where('id', '!=' , $property->id)
                     ->take(5)->get();
 
-        $videoembed = $this->convertYoutube($property->video, 560, 315);
+        //$videoembed = $this->convertYoutube($property->video, 560, 315);
 
         $cities = Property::select('city','city_slug')->distinct('city_slug')->get();
 
-        return view('pages.properties.single', compact('property','rating','relatedproperty','videoembed','cities'));
+        return view('pages.properties.single', compact('property','rating','relatedproperty','cities'));
     }
 
 

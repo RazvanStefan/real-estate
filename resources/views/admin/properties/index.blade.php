@@ -37,7 +37,8 @@
                                     <th>Purpose</th>
                                     <th>Beds</th>
                                     <th>Baths</th>
-                                    <th><i class="material-icons small">comment</i></th>
+                                    <!--<th><i class="material-icons small">comment</i></th>-->
+                                    <th>Contact</th>
                                     <th><i class="material-icons small">stars</i></th>
                                     <th width="150">Action</th>
                                 </tr>
@@ -48,9 +49,7 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>
-                                        @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                            <img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}" width="60" class="img-responsive img-rounded">
-                                        @endif
+                                        <img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}" width="60" class="img-responsive img-rounded">
                                     </td>
                                     <td>
                                         <span title="{{$property->title}}">
@@ -62,11 +61,12 @@
                                     <td>{{$property->purpose}}</td>
                                     <td>{{$property->bedroom}}</td>
                                     <td>{{$property->bathroom}}</td>
-
+                                    <td>{{$property->contact_person}} </br> <b>Telefon:</b> {{$property->contact_phone}}</td>
+<!--
                                     <td>
                                         <span class="badge bg-indigo">{{ $property->comments_count }}</span>
                                     </td>
-
+-->
                                     <td>
                                         @if($property->featured == true)
                                             <span class="badge bg-indigo"><i class="material-icons small">star</i></span>

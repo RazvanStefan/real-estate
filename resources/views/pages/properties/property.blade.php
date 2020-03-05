@@ -66,8 +66,8 @@
                                 </div>
 
                                 <h5>
-                                    &dollar;{{ $property->price }}
-                                    <div class="right" id="propertyrating-{{$property->id}}"></div>
+                                    {{ $property->price }} &euro;
+                                    <!-- <div class="right" id="propertyrating-{{$property->id}}"></div> -->
                                 </h5>                                
                             </div>
                             <div class="card-action property-action">
@@ -81,12 +81,14 @@
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>{{ $property->area}}</strong> Square Feet
+                                    Area: <strong>{{ $property->area}}</strong> mp
                                 </span>
+                                <!--
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
                                     <strong>{{ $property->comments_count}}</strong>
                                 </span>
+                                -->
                             </div>
                         </div>
                     </div>

@@ -42,6 +42,38 @@ class DashboardController extends Controller
         ));
     }
 
+    public function userDelete($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        Toastr::success('message', 'Utilizator sters cu succes!');
+        return back();
+    }
+
+    public function makeAgent($id)
+    {
+        $user = User::findOrFail($id);
+
+        if($user->role_id == 1)
+            {
+                Toastr::warning('message', 'Nu se pot retrage drepturile de administrator!');
+            }
+        elseif ($user->role_id == 2)
+            {
+                $user->role_id = 3;
+                $user->save();
+                Toastr::warning('message', 'Drepturi retrase!');
+            }
+        else
+            {   
+                $user->role_id = 2;
+                $user->save();
+                Toastr::success('message', 'Drepturi adaugate!');
+            }        
+
+        return back();
+    }
 
     public function settings()
     {
@@ -60,9 +92,9 @@ class DashboardController extends Controller
             'address'   => 'required',
             'footer'    => 'required',
             'aboutus'   => 'required',
-            'facebook'  => 'required|url',
-            'twitter'   => 'required|url',
-            'linkedin'  => 'required|url',
+            'facebook'  => 'url|nullable',
+            'twitter'   => 'url|nullable',
+            'linkedin'  => 'url|nullable',
         ]);
 
         Setting::updateOrCreate(

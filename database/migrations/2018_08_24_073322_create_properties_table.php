@@ -27,6 +27,8 @@ class CreatePropertiesTable extends Migration
             $table->string('city');
             $table->string('city_slug');
             $table->string('address');
+            $table->string('contact_person');
+            $table->string('contact_phone');
             $table->integer('area');
             $table->integer('agent_id');
             $table->text('description');

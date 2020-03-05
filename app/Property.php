@@ -8,7 +8,7 @@ class Property extends Model
 {
     protected $fillable = [
         'title',    'price',        'featured',     'purpose',  'type',         'image',
-        'slug',     'bedroom',      'bathroom',     'city',     'city_slug',    'address',
+        'slug',     'bedroom',      'bathroom',     'city',     'city_slug',    'address',    'contact_person', 'contact_phone',
         'area',     'agent_id',     'description',  'video',    'floor_plan',   
         'location_latitude',        'location_longitude',       'nearby',
         

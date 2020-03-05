@@ -51,6 +51,10 @@
                             <strong>Address : </strong>
                             <span class="left">{{$property->address}}</span>
                         </li>
+                        <li class="list-group-item">
+                            <strong>Contact : </strong>
+                            <span class="left">{{$property->contact_person}} | <strong>Tel:</strong> {{$property->contact_phone}}</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -102,7 +106,7 @@
                     <div class="gallery-box">
                         @foreach($property->gallery as $gallery)
                         <div class="gallery-image">
-                            <img class="img-responsive" src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt="{{$property->title}}">
+                            <img class="img-responsive" src="{{Storage::url('../real-estate/public/storage/property/gallery/'.$gallery->name)}}" alt="{{$property->title}}">
                         </div>
                         @endforeach
                     </div>
