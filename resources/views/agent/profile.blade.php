@@ -18,7 +18,7 @@
 
                 <div class="col s12 m9">
                     <div class="agent-content">
-                        <h4 class="agent-title">PROFILE</h4>
+                        <h4 class="agent-title">PROFIL</h4>
 
                         <form action="{{route('agent.profile.update')}}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -27,7 +27,7 @@
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">person</i>
                                     <input id="name" name="name" type="text" value="{{ $profile->name }}" class="validate">
-                                    <label for="name">Name</label>
+                                    <label for="name">Nume</label>
                                 </div>
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">assignment_ind</i>
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="file-field input-field col s4">
                                     <div class="btn indigo">
-                                        <span>Image</span>
+                                        <span>Imagine</span>
                                         <input type="file" name="image">
                                     </div>
                                     <div class="file-path-wrapper">
@@ -62,13 +62,13 @@
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">mode_edit</i>
                                     <textarea id="about" name="about" class="materialize-textarea">{{ $profile->about or null }}</textarea>
-                                    <label for="about">About</label>
+                                    <label for="about">Despre</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <button class="btn waves-effect waves-light btn-large indigo darken-4" type="submit">
-                                    Submit
+                                    Trimite
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>
