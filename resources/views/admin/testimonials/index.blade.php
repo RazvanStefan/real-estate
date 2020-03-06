@@ -14,7 +14,7 @@
     <div class="block-header">
         <a href="{{route('admin.testimonials.create')}}" class="waves-effect waves-light btn right m-b-15 addbtn">
             <i class="material-icons left">add</i>
-            <span>CREATE </span>
+            <span>CREAZA </span>
         </a>
     </div>
 
@@ -22,18 +22,18 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>TESTIMONIAL LIST</h2>
+                    <h2>LISTA</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
+                                    <th>#</th>
+                                    <th>Imagine</th>
+                                    <th>Nume</th>
                                     <th>Testimonial</th>
-                                    <th width="100px">Action</th>
+                                    <th width="100px">Actiuni</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -92,19 +92,19 @@
         function deleteTestimonial(id){
             
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Sunteti sigur?',
+            text: "Aceasta actiune este ireversibila!",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Sterge!'
             }).then((result) => {
                 if (result.value) {
                     document.getElementById('del-testimonial-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Testimonial has been deleted.',
+                    'Sters!',
+                    'Testimonial sters!',
                     'success'
                     )
                 }
