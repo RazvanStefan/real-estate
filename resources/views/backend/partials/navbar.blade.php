@@ -21,7 +21,7 @@
                             <span class="label-count">{{ $countmessages }}</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">MESSAGES</li>
+                            <li class="header">MESAJE</li>
                             <li class="body">
                                 <ul class="menu">
                                     @foreach($navbarmessages as $message)
@@ -43,7 +43,7 @@
                                 </ul>
                             </li>
                             <li class="footer">
-                                <a href="{{ route('admin.message') }}">View All Messages</a>
+                                <a href="{{ route('admin.message') }}">Vezi toate mesajele</a>
                             </li>
                         </ul>
                     </li>
@@ -76,7 +76,7 @@
                                 <a class="dropdownitem" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                    <i class="material-icons">input</i> {{ __('Sign Out') }}
+                                    <i class="material-icons">input</i> {{ __('Deconectare') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
