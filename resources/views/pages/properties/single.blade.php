@@ -104,7 +104,7 @@
                     <div>
                         @if($property->features)
                             <ul class="collection with-header">
-                                <li class="collection-header grey lighten-4"><h5 class="m-0">Features</h5></li>
+                                <li class="collection-header grey lighten-4"><h5 class="m-0">Utilitati</h5></li>
                                 @foreach($property->features as $feature)
                                     <li class="collection-item">{{$feature->name}}</li>
                                 @endforeach
@@ -114,7 +114,7 @@
 
                     <div class="card-no-box-shadow card">
                         <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">Near By</h5>
+                            <h5 class="m-0">Obiective in apropiere</h5>
                         </div>
                         <div class="single-narebay p-15">
                             {!! $property->nearby !!}
@@ -208,7 +208,7 @@
                         <div>
                             <ul class="collection with-header m-t-0">
                                 <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">Contact with Agent</h5>
+                                    <h5 class="m-0">Contacteaza agentul</h5>
                                 </li>
                                 <li class="collection-item p-0">
                                     @if($property->user)
@@ -239,20 +239,20 @@
                                         <input type="hidden" name="property_id" value="{{ $property->id }}">
                                             
                                         <div class="box">
-                                            <input type="text" name="name" placeholder="Your Name">
+                                            <input type="text" name="name" placeholder="Nume">
                                         </div>
                                         <div class="box">
-                                            <input type="email" name="email" placeholder="Your Email">
+                                            <input type="email" name="email" placeholder="Email">
                                         </div>
                                         <div class="box">
-                                            <input type="number" name="phone" placeholder="Your Phone">
+                                            <input type="number" name="phone" placeholder="Telefon">
                                         </div>
                                         <div class="box">
-                                            <textarea name="message" placeholder="Your Msssage"></textarea>
+                                            <textarea name="message" placeholder="Mesaj"></textarea>
                                         </div>
                                         <div class="box">
                                             <button id="msgsubmitbtn" class="btn waves-effect waves-light w100 indigo" type="submit">
-                                                SEND
+                                                TRIMITE
                                                 <i class="material-icons left">send</i>
                                             </button>
                                         </div>
@@ -264,7 +264,7 @@
                         <div>
                             <ul class="collection with-header">
                                 <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">City List</h5>
+                                    <h5 class="m-0">Orase</h5>
                                 </li>
                                 @foreach($cities as $city)
                                     <li class="collection-item p-0">
@@ -279,7 +279,7 @@
                         <div>
                             <ul class="collection with-header">
                                 <li class="collection-header grey lighten-4">
-                                    <h5 class="m-0">Related Properties</h5>
+                                    <h5 class="m-0">Anunturi asemanatoare</h5>
                                 </li>
                                 @foreach($relatedproperty as $property_related)
                                     <li class="collection-item p-0">
