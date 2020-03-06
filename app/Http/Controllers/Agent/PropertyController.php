@@ -135,7 +135,7 @@ class PropertyController extends Controller
             }
         }
 
-        Toastr::success('message', 'Property created successfully.');
+        Toastr::success('message', 'Anunt adaugat!');
         return redirect()->route('agent.properties.index');
     }
 
@@ -262,7 +262,7 @@ class PropertyController extends Controller
             }
         }
 
-        Toastr::success('message', 'Property updated successfully.');
+        Toastr::success('message', 'Anunt actualizat!');
         return redirect()->route('agent.properties.index');
     }
 
@@ -292,7 +292,7 @@ class PropertyController extends Controller
 
         $property->features()->detach();
         
-        Toastr::success('message', 'Property deleted successfully.');
+        Toastr::success('message', 'Anunt sters!');
         return back();
     }
 
