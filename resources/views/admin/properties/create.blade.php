@@ -20,56 +20,56 @@
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>CREATE PROPERTY</h2>
+                    <h2>ADAUGA ANUNT</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" name="title" class="form-control" value="{{old('title')}}">
-                            <label class="form-label">Property Title</label>
+                            <label class="form-label">Titlu</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="price" required>
-                            <label class="form-label">Price</label>
+                            <label class="form-label">Pret</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bedroom" required>
-                            <label class="form-label">Bedroom</label>
+                            <label class="form-label">Camere</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bathroom" required>
-                            <label class="form-label">Bathroom</label>
+                            <label class="form-label">Bai</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="city" required>
-                            <label class="form-label">City</label>
+                            <label class="form-label">Oras</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="address" required>
-                            <label class="form-label">Address</label>
+                            <label class="form-label">Adresa</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="area" required>
-                            <label class="form-label">Area</label>
+                            <label class="form-label">Suprafata</label>
                         </div>
                         <div class="help-info">mp</div>
                     </div>
@@ -90,7 +90,7 @@
 
                     <div class="form-group">
                         <input type="checkbox" id="featured" name="featured" class="filled-in" value="1" />
-                        <label for="featured">Featured</label>
+                        <label for="featured">Promovat</label>
                     </div>
 
                     <hr>
@@ -109,7 +109,7 @@
             </div>
             <div class="card">
                 <div class="header">
-                    <h2>GALLERY IMAGE</h2>
+                    <h2>GALERIE</h2>
                 </div>
                 <div class="body">
                     <input id="input-id" type="file" name="gallaryimage[]" class="file" data-preview-file-type="text" multiple>
@@ -119,7 +119,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>SELECT</h2>
+                    <h2>ALEGE</h2>
                 </div>
                 <div class="body">
 
@@ -127,9 +127,9 @@
                         <div class="form-line {{$errors->has('purpose') ? 'focused error' : ''}}">
                             <label>Select Purpose</label>
                             <select name="purpose" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
-                                <option value="sale">Sale</option>
-                                <option value="rent">Rent</option>
+                                <option value="">-- Vanzare/Inchiriere --</option>
+                                <option value="sale">Vanzare</option>
+                                <option value="rent">Inchiriere</option>
                             </select>
                         </div>
                     </div>
@@ -138,9 +138,9 @@
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
                             <label>Select type</label>
                             <select name="type" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
-                                <option value="house">House</option>
-                                <option value="apartment">Apartment</option>
+                                <option value="">-- Casa/Apartament --</option>
+                                <option value="house">Casa</option>
+                                <option value="apartment">Apartament</option>
                             </select>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
             </div>
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>ImAGINE DE COPERTA</h2>
                 </div>
                 <div class="body">
                     <div class="form-group">
@@ -201,12 +201,12 @@
                     {{-- BUTTON --}}
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>INAPOI</span>
                     </a>
 
                     <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                         <i class="material-icons">save</i>
-                        <span>SAVE</span>
+                        <span>SALVEAZA</span>
                     </button>
                 </div>
             </div>
