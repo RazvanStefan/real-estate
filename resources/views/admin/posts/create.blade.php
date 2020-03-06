@@ -19,20 +19,20 @@
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>CREATE POST</h2>
+                    <h2>CREAZA</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" name="title" class="form-control" value="{{old('title')}}">
-                            <label class="form-label">Post Title</label>
+                            <label class="form-label">Titlu</label>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <input type="checkbox" id="published" name="status" class="filled-in" value="1" />
-                        <label for="published">Published</label>
+                        <label for="published">Publicat</label>
                     </div>
                     <hr>
                     <div class="form-group">
@@ -46,7 +46,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>SELECT CATEGORY</h2>
+                    <h2>SELECTEAZA CATEGORIE</h2>
                 </div>
                 <div class="body">
 
@@ -63,7 +63,7 @@
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('tags') ? 'focused error' : ''}}">
-                            <label>Select Tag</label>
+                            <label>SELECTEAZA TAG</label>
                             <select name="tags[]" class="form-control show-tick" multiple data-live-search="true">
                                 @foreach($tags as $tag)
                                     <option value="{{$tag->id}}">{{$tag->name}}</option>
@@ -73,19 +73,19 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="form-label">Featured Image</label>
+                        <label for="form-label">Imagine</label>
                         <input type="file" name="image">
                     </div>
 
 
                     <a href="{{route('admin.posts.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>INAPOI</span>
                     </a>
 
                     <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                         <i class="material-icons">save</i>
-                        <span>SAVE</span>
+                        <span>SALVEAZA</span>
                     </button>
 
                 </div>
