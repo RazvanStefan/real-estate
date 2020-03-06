@@ -76,7 +76,7 @@ class PostController extends Controller
         $post->categories()->attach($request->categories);
         $post->tags()->attach($request->tags);
 
-        Toastr::success('message', 'Post created successfully.');
+        Toastr::success('message', 'Postare creata!');
         return redirect()->route('admin.posts.index');
 
     }
@@ -150,7 +150,7 @@ class PostController extends Controller
         $post->categories()->sync($request->categories);
         $post->tags()->sync($request->tags);
 
-        Toastr::success('message', 'Post updated successfully.');
+        Toastr::success('message', 'Postare actualizata!');
         return redirect()->route('admin.posts.index');
     }
 
@@ -168,7 +168,7 @@ class PostController extends Controller
         $post->tags()->detach();
         $post->comments()->delete();
 
-        Toastr::success('message', 'Post deleted successfully.');
+        Toastr::success('message', 'Postare stearsa!');
         return back();
     }
 }
