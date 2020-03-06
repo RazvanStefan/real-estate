@@ -17,10 +17,10 @@
             <div class="card">
                 <div class="header bg-indigo">
                     <h2>
-                        PROFILE
+                        PROFIL
                         <a href="{{route('admin.changepassword')}}" class="btn waves-effect waves-light right headerightbtn">
                             <i class="material-icons left">lock</i>
-                            <span>CHANGE PASSWORD </span>
+                            <span>SCHIMBA PAROLA </span>
                         </a>
                     </h2>
                 </div>
@@ -31,14 +31,14 @@
                         <div class="form-group">
                             <div class="form-line">
                                 <input type="text" name="name" class="form-control" value="{{ $profile->name or null }}">
-                                <label class="form-label">Name</label>
+                                <label class="form-label">Nume</label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="form-line">
                                 <input type="text" name="username" class="form-control" value="{{ $profile->username or null }}">
-                                <label class="form-label">User Name</label>
+                                <label class="form-label">Username</label>
                             </div>
                         </div>
 
@@ -55,20 +55,20 @@
                             <input type="file" name="image" id="profile-image-input" style="display:none;">
                             <button type="button" class="btn bg-grey btn-sm waves-effect m-t-15" id="profile-image-btn">
                                 <i class="material-icons">image</i>
-                                <span>UPLOAD IMAGE</span>
+                                <span>ADAUGA IMAGINE</span>
                             </button> --}}
                         </div>
 
                         <div class="form-group">
                             <div class="form-line">
                                 <textarea name="about" rows="4" class="form-control no-resize">{{ $profile->about or null }}</textarea>
-                                <label class="form-label">About Us</label>
+                                <label class="form-label">Despre noi</label>
                             </div>
                         </div>
 
                         <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                             <i class="material-icons">save</i>
-                            <span>SAVE</span>
+                            <span>SALVEAZA</span>
                         </button>
 
                     </form>

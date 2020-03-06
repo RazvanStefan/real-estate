@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col m4 s12">
-                <h5 class="white-text uppercase">About Us</h5>
+                <h5 class="white-text uppercase">Despre Noi</h5>
                 @if(isset($footersettings[0]) && $footersettings[0]['aboutus'])
                     <p class="grey-text text-lighten-4">{{ $footersettings[0]['aboutus'] }}</p>
                 @else
@@ -10,7 +10,7 @@
                 @endif
             </div>
             <div class="col m6 s12">
-                <h5 class="white-text uppercase">Recent Properties</h5>
+                <h5 class="white-text uppercase">Adaugate Recent</h5>
                 <ul class="collection border0">
 
                     @foreach($footerproperties as $property)
@@ -28,14 +28,14 @@
                 </ul>
             </div>
             <div class="col m2 s12">
-                <h5 class="white-text uppercase">Menu</h5>
+                <h5 class="white-text uppercase">Meniu</h5>
                 <ul>
                     <li class="uppercase {{ Request::is('property*') ? 'underline' : '' }}">
-                        <a href="{{ route('property') }}" class="grey-text text-lighten-3">Properties</a>
+                        <a href="{{ route('property') }}" class="grey-text text-lighten-3">Anunturi</a>
                     </li>
 
                     <li class="uppercase {{ Request::is('agents*') ? 'underline' : '' }}">
-                        <a href="{{ route('agents') }}" class="grey-text text-lighten-3">Agents</a>
+                        <a href="{{ route('agents') }}" class="grey-text text-lighten-3">Agenti</a>
                     </li>
 
                     <li class="uppercase {{ Request::is('contact') ? 'underline' : '' }}">

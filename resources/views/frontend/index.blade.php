@@ -7,7 +7,7 @@
     <section class="section grey lighten-4 center">
         <div class="container">
             <div class="row">
-                <h4 class="section-heading">Services</h4>
+                <h4 class="section-heading">Servicii</h4>
             </div>
             <div class="row">
                 @foreach($services as $service)
@@ -29,7 +29,7 @@
     <section class="section">
         <div class="container">
             <div class="row">
-                <h4 class="section-heading">Featured Properties</h4>
+                <h4 class="section-heading">  </h4>
             </div>
             <div class="row">
 

@@ -74,10 +74,10 @@
                         <table class="table table-hover dashboard-task-infos">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Title</th>
-                                    <th>Price</th>
-                                    <th>City</th>
+                                    <th>#</th>
+                                    <th>Titlu</th>
+                                    <th>Pret</th>
+                                    <th>Oras</th>
                                     <th><i class="material-icons small">star</i></th>
                                     <th>Manager</th>
                                 </tr>
@@ -112,17 +112,17 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="header">
-                    <h2>RECENT POSTS</h2>
+                    <h2>POSTARI RECENTE</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-hover dashboard-task-infos">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Title</th>
+                                    <th>#</th>
+                                    <th>Titlu</th>
                                     <th><i class="material-icons small">comment</i></th>
-                                    <th>Author</th>
+                                    <th>Autor</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -155,18 +155,18 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="header">
-                    <h2>USER LIST</h2>
+                    <h2>UTILIZATORI</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-hover dashboard-task-infos dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Name</th>
+                                    <th>#</th>
+                                    <th>Nume</th>
                                     <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Action</th>
+                                    <th>Rol</th>
+                                    <th>Actiuni</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -207,18 +207,18 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="header">
-                    <h2>RECENT COMMENTS</h2>
+                    <h2>COMENTARII RECENTE</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-hover dashboard-task-infos">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Comment</th>
+                                    <th>#</th>
+                                    <th>Comentariu</th>
                                     <th><i class="material-icons small">check</i></th>
-                                    <th>Author</th>
-                                    <th>Time</th>
+                                    <th>Autor</th>
+                                    <th>Data</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -181,7 +181,7 @@ class PagesController extends Controller
         Message::create($request->all());
 
         if($request->ajax()){
-            return response()->json(['message' => 'Message send successfully.']);
+            return response()->json(['message' => 'Mesaj trimis!']);
         }
 
     }
@@ -219,7 +219,7 @@ class PagesController extends Controller
         Mail::to($mailto)->send(new Contact($message,$adminname,$mailfrom));
 
         if($request->ajax()){
-            return response()->json(['message' => 'Message send successfully.']);
+            return response()->json(['message' => 'Mesaj trimis!']);
         }
 
     }

@@ -13,7 +13,7 @@
     <div class="block-header">
         <a href="{{route('admin.message')}}" class="waves-effect waves-light btn btn-danger right m-b-15">
             <i class="material-icons left">arrow_back</i>
-            <span>BACK</span>
+            <span>INAPOI</span>
         </a>
     </div>
 
@@ -21,7 +21,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>REPLAY MESSAGE</h2>
+                    <h2>RASPUNDE</h2>
                 </div>
                 <div class="body">
                     @if($message->user_id)
@@ -34,26 +34,26 @@
                             <input type="hidden" name="email" value="{{ auth()->user()->email }}">
 
                             <div class="form-group form-float">
-                                <h5>Replay To: {{ $message->email }}</h5>
+                                <h5>Catre: {{ $message->email }}</h5>
                             </div>
 
                             <div class="form-group">
                                 <div class="form-line">
                                     <input type="number" name="phone" class="form-control">
-                                    <label class="form-label">Phone</label>
+                                    <label class="form-label">Telefon</label>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="form-line">
                                     <textarea name="message" rows="4" class="form-control no-resize"></textarea>
-                                    <label class="form-label">Message</label>
+                                    <label class="form-label">Mesaj</label>
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                                 <i class="material-icons">replay</i>
-                                <span>Replay</span>
+                                <span>Raspunde</span>
                             </button>
                         </form>
 
@@ -67,27 +67,27 @@
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <input type="email" name="email" class="form-control" value="{{ $message->email }}" readonly>
-                                    <label class="form-label">TO</label>
+                                    <label class="form-label">CATRE</label>
                                 </div>
                             </div>
 
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <input type="text" name="subject" class="form-control">
-                                    <label class="form-label">Subject</label>
+                                    <label class="form-label">Subiect</label>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="form-line">
                                     <textarea name="message" rows="4" class="form-control no-resize"></textarea>
-                                    <label class="form-label">Message</label>
+                                    <label class="form-label">Mesaj</label>
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                                 <i class="material-icons">replay</i>
-                                <span>SEND</span>
+                                <span>TRIMITE</span>
                             </button>
                         </form>
                     @endif

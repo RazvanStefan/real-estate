@@ -54,7 +54,7 @@ class SliderController extends Controller
         $slider->image = $imagename;
         $slider->save();
 
-        Toastr::success('message', 'Slider created successfully.');
+        Toastr::success('message', 'Slider creat!');
         return redirect()->route('admin.sliders.index');
     }
 
@@ -98,7 +98,7 @@ class SliderController extends Controller
         $slider->image = $imagename;
         $slider->save();
 
-        Toastr::success('message', 'Slider updated successfully.');
+        Toastr::success('message', 'Slider actualizat!');
         return redirect()->route('admin.sliders.index');
     }
 
@@ -113,7 +113,7 @@ class SliderController extends Controller
 
         $slider->delete();
 
-        Toastr::success('message', 'Slider deleted successfully.');
+        Toastr::success('message', 'Slider sters!');
         return back();
     }
 }

@@ -11,22 +11,22 @@
                     <div class="searchbar">
                         <div class="input-field col s12 m3">
                             <input type="text" name="city" id="autocomplete-input" class="autocomplete custominputbox" autocomplete="off">
-                            <label for="autocomplete-input">Enter City or State</label>
+                            <label for="autocomplete-input">Oras</label>
                         </div>
 
                         <div class="input-field col s12 m2">
                             <select name="type" class="browser-default">
-                                <option value="" disabled selected>Choose Type</option>
-                                <option value="apartment">Apartment</option>
-                                <option value="house">House</option>
+                                <option value="" disabled selected>Tip</option>
+                                <option value="apartment">Apartament</option>
+                                <option value="house">Casa</option>
                             </select>
                         </div>
 
                         <div class="input-field col s12 m2">
                             <select name="purpose" class="browser-default">
-                                <option value="" disabled selected>Purpose</option>
-                                <option value="rent">Rent</option>
-                                <option value="sale">Sale</option>
+                                <option value="" disabled selected>Inchiriat/Vanzare</option>
+                                <option value="rent">Inchiriat</option>
+                                <option value="sale">Vanzare</option>
                             </select>
                         </div>
 
@@ -43,7 +43,7 @@
 
                         <div class="input-field col s12 m2">
                             <input type="text" name="maxprice" id="maxprice" class="custominputbox">
-                            <label for="maxprice">Max Price</label>
+                            <label for="maxprice">Pret Max.</label>
                         </div>
                         
                         <div class="input-field col s12 m1">

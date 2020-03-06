@@ -17,12 +17,12 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">READ MESSAGES</h4>
+                    <h4 class="agent-title">CITESTE MESAJE</h4>
                     
                     <div class="agent-content">
                         
-                        <span><strong>From:</strong> <em>{{ $message->name }} < {{ $message->email }} ></em></span> <br>
-                        <span><strong>Phone:</strong> {{ $message->phone }}</span>
+                        <span><strong>De la:</strong> <em>{{ $message->name }} < {{ $message->email }} ></em></span> <br>
+                        <span><strong>Telefon:</strong> {{ $message->phone }}</span>
 
                         <div class="read-message">
                             <span>Message:</span>
@@ -31,7 +31,7 @@
 
                         <a href="{{route('user.message.replay',$message->id)}}" class="btn btn-small indigo waves-effect">
                             <i class="material-icons left">replay</i>
-                            <span>Replay</span>
+                            <span>Raspunde</span>
                         </a>
 
                         <form class="right" action="{{route('user.message.readunread')}}" method="POST">

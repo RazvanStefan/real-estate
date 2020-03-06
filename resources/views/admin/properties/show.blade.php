@@ -18,37 +18,37 @@
             <div class="card">
 
                 <div class="header bg-indigo">
-                    <h2>SHOW PROPERTY</h2>
+                    <h2>VIZUALIZARE ANUNT</h2>
                 </div>
 
                 <div class="header">
                     <h2>
                         {{$property->title}}
                         <br>
-                        <small>Posted By <strong>{{$property->user->name}}</strong> on {{$property->created_at->toFormattedDateString()}}</small>
+                        <small>Adaugat de <strong>{{$property->user->name}}</strong> in data de {{$property->created_at->toFormattedDateString()}}</small>
                     </h2>
                 </div>
 
                 <div class="header">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <strong>Price : </strong>
-                            <span class="right"> &dollar;{{$property->price}}</span>
+                            <strong>Pret : </strong>
+                            <span class="right"> {{$property->price}} &euro;</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Bedroom : </strong>
+                            <strong>Bai : </strong>
                             <span class="right">{{$property->bedroom}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Bathroom : </strong>
+                            <strong>Camere : </strong>
                             <span class="right">{{$property->bathroom}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>City : </strong>
+                            <strong>Oras : </strong>
                             <span class="right">{{$property->city}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Address : </strong>
+                            <strong>Adresa : </strong>
                             <span class="left">{{$property->address}}</span>
                         </li>
                         <li class="list-group-item">
@@ -76,7 +76,7 @@
             @if($property->floor_plan)
             <div class="card">
                 <div class="header">
-                    <h2>FLOOR PLAN</h2>
+                    <h2>SCHITA ETAJULUI</h2>
                 </div>
                 @if($property->floor_plan && $property->floor_plan != 'default.png')
                 <div class="body">
@@ -89,7 +89,7 @@
             @if($videoembed)
             <div class="card">
                 <div class="header">
-                    <h2>PROPERTY VIDEO</h2>
+                    <h2>VIDEO</h2>
                 </div>
                 <div class="body text-center">
                     {!! $videoembed !!}
@@ -100,7 +100,7 @@
             @if(!$property->gallery->isEmpty())
             <div class="card">
                 <div class="header bg-red">
-                    <h2>GALLERY IMAGE</h2>
+                    <h2>GALERIE</h2>
                 </div>
                 <div class="body">
                     <div class="gallery-box">
@@ -117,7 +117,7 @@
             {{-- COMMENTS --}}
             <div class="card">
                 <div class="header">
-                    <h2>{{ $property->comments_count }} Comments</h2>
+                    <h2>{{ $property->comments_count }} Comentarii</h2>
                 </div>
                 <div class="body">
 
@@ -166,7 +166,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-cyan">
-                    <h2>TYPE</h2>
+                    <h2>TIP</h2>
                 </div>
                 <div class="body">
                     <strong class="label bg-red">{{$property->type}}</strong> for <strong class="label bg-blue">{{$property->purpose}}</strong>
@@ -174,7 +174,7 @@
             </div>
             <div class="card">
                 <div class="header bg-green">
-                    <h2>FEATURES</h2>
+                    <h2>UTILITATI</h2>
                 </div>
                 <div class="body">
                     @foreach($property->features as $feature)
@@ -185,7 +185,7 @@
 
             <div class="card">
                 <div class="header bg-amber">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>IMAGINE DE COPERTA</h2>
                 </div>
                 <div class="body">
 
@@ -193,11 +193,11 @@
                     
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>INAPOI</span>
                     </a>
                     <a href="{{route('admin.properties.edit',$property->slug)}}" class="btn btn-info btn-lg waves-effect">
                         <i class="material-icons">edit</i>
-                        <span>EDIT</span>
+                        <span>EDITEAZA</span>
                     </a>
 
                 </div>

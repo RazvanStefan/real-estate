@@ -20,32 +20,32 @@
     <a href="{{ route('agent.profile') }}">
         <li class="collection-item {{ Request::is('agent/profile') ? 'active' : '' }}">
             <i class="material-icons left">person</i>
-            <span>Profile</span>
+            <span>Profil</span>
         </li>
     </a>
     <a href="{{ route('agent.message') }}">
         <li class="collection-item {{ Request::is('agent/message*') ? 'active' : '' }}">
             <i class="material-icons left">mail</i>
-            <span>Messages</span>
+            <span>Mesaje</span>
         </li>
     </a>
 
     <a href="{{ route('agent.properties.index') }}">
         <li class="collection-item {{ Request::is('agent/properties') ? 'active' : '' }}">
             <i class="material-icons left">view_list</i>
-            <span>Properties<span>
+            <span>Anunturi<span>
         </li>
     </a>
     <a href="{{ route('agent.properties.create') }}">
         <li class="collection-item {{ Request::is('agent/properties/create') ? 'active' : '' }}">
             <i class="material-icons left">create</i>
-            <span>Create Property<span>
+            <span>Adauga anunt<span>
         </li>
     </a>
     <a href="{{ route('agent.changepassword') }}">
         <li class="collection-item {{ Request::is('agent/changepassword') ? 'active' : '' }}">
             <i class="material-icons left">lock</i>
-            <span>Change Password</span>
+            <span>Schimba parola</span>
         </li>
     </a>
 </ul>

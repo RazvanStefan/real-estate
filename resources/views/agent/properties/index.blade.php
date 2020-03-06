@@ -17,19 +17,19 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">PROPERTY LIST</h4>
+                    <h4 class="agent-title">ANUNTURI</h4>
                     
                     <div class="agent-content">
                         <table class="striped responsive-table">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Title</th>
-                                    <th>Type</th>
-                                    <th>City</th>
+                                    <th>#</th>
+                                    <th>Titlu</th>
+                                    <th>Tip</th>
+                                    <th>Oras</th>
                                     <th>Contact</th>
                                     <th><i class="material-icons small-star p-t-10">stars</i></th>
-                                    <th>Action</th>
+                                    <th>Actiuni</th>
                                 </tr>
                             </thead>
                     
@@ -89,18 +89,18 @@
     <script>
         function deleteProperty(id){
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Sunteti sigur?',
+            text: "Aceasta actiune este ireversibila!",
             icon: 'warning',
             buttons: true,
             dangerMode: true,
-            buttons: ["Cancel", "Yes, delete it!"]
+            buttons: ["Anuleaza", "Sterge!"]
             }).then((value) => {
                 if (value) {
                     document.getElementById('del-property-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Property has been deleted.',
+                    'Sters!',
+                    'Anuntul a fost sters!.',
                     'success',
                     {
                         buttons: false,

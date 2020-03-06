@@ -17,7 +17,7 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">REPLAY MESSAGES</h4>
+                    <h4 class="agent-title">RASPUNDE</h4>
                     
                     <div class="agent-content">
                         
@@ -33,12 +33,12 @@
                                     <div class="input-field col s6">
                                         <i class="material-icons prefix">email</i>
                                         <input id="email" type="email" value="{{ $message->email }}" class="validate" readonly>
-                                        <label for="email">TO</label>
+                                        <label for="email">Destinatar</label>
                                     </div>
                                     <div class="input-field col s6">
                                         <i class="material-icons prefix">phone</i>
                                         <input id="phone" name="phone" type="number" class="validate">
-                                        <label for="phone">Phone</label>
+                                        <label for="phone">Telefon</label>
                                     </div>
                                 </div>
     
@@ -46,13 +46,13 @@
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">mode_edit</i>
                                         <textarea id="message" name="message" class="materialize-textarea"></textarea>
-                                        <label for="message">Message</label>
+                                        <label for="message">Mesaj</label>
                                     </div>
                                 </div>
     
                                 <div class="row">
                                     <button class="btn waves-effect waves-light btn-small indigo darken-4 right" type="submit">
-                                        <span>SEND</span>
+                                        <span>TRIMITE</span>
                                         <i class="material-icons right">send</i>
                                     </button>
                                 </div>
@@ -66,7 +66,7 @@
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">email</i>
                                         <input id="email" name="email" type="email" value="{{ $message->email }}" class="validate" readonly>
-                                        <label for="email">TO</label>
+                                        <label for="email">Destinatar</label>
                                     </div>
                                 </div>
 
@@ -74,7 +74,7 @@
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">subject</i>
                                         <input id="subject" name="subject" type="text" class="validate">
-                                        <label for="subject">Subject</label>
+                                        <label for="subject">Subiect</label>
                                     </div>
                                 </div>
     
@@ -82,13 +82,13 @@
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">mode_edit</i>
                                         <textarea id="message-mail" name="message" class="materialize-textarea"></textarea>
-                                        <label for="message">Message</label>
+                                        <label for="message">Mesaj</label>
                                     </div>
                                 </div>
     
                                 <div class="row">
                                     <button class="btn waves-effect waves-light btn-small indigo darken-4 right" type="submit">
-                                        <span>SEND</span>
+                                        <span>TRIMITE</span>
                                         <i class="material-icons right">send</i>
                                     </button>
                                 </div>

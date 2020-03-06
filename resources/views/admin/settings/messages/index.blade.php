@@ -16,7 +16,7 @@
         <div class="col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>MESSAGES</h2>
+                    <h2>MESAJE</h2>
                 </div>
                 <div class="body">
 
@@ -24,12 +24,12 @@
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Name</th>
+                                    <th>#</th>
+                                    <th>Nume</th>
                                     <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Message</th>
-                                    <th width="150px">Action</th>
+                                    <th>Telefon</th>
+                                    <th>Mesaj</th>
+                                    <th width="150px">Actiuni</th>
                                 </tr>
                             </thead>
 
@@ -97,19 +97,19 @@
         function deleteMessage(id){
             
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Sunteti sigur?',
+            text: "Aceasta acriune este iremediabila!",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Sterge!'
             }).then((result) => {
                 if (result.value) {
                     document.getElementById('del-message-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Message has been deleted.',
+                    'Sters!',
+                    'Mesaj sters.',
                     'success'
                     )
                 }

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col s12 m6 offset-m3">
             <div class="card">
-                <h4 class="center indigo-text uppercase p-t-30">{{ __('Register') }}</h4>
+                <h4 class="center indigo-text uppercase p-t-30">{{ __('Inregistrare') }}</h4>
 
                 <div class="p-20">
                     <form method="POST" action="{{ route('register') }}">

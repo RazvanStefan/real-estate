@@ -17,21 +17,21 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">READ MESSAGES</h4>
+                    <h4 class="agent-title">Citeste mesaje</h4>
                     
                     <div class="agent-content">
                         
-                        <span><strong>From:</strong> <em>{{ $message->name }} < {{ $message->email }} ></em></span> <br>
-                        <span><strong>Phone:</strong> {{ $message->phone }}</span>
+                        <span><strong>De la:</strong> <em>{{ $message->name }} < {{ $message->email }} ></em></span> <br>
+                        <span><strong>Telefon:</strong> {{ $message->phone }}</span>
 
                         <div class="read-message">
-                            <span>Message:</span>
+                            <span>Mesaj:</span>
                             <p>{!! $message->message !!}</p>
                         </div>
 
                         <a href="{{route('agent.message.replay',$message->id)}}" class="btn btn-small indigo waves-effect">
                             <i class="material-icons left">replay</i>
-                            <span>Replay</span>
+                            <span>Raspunde</span>
                         </a>
 
                         <form class="right" action="{{route('agent.message.readunread')}}" method="POST">
@@ -42,9 +42,9 @@
                             <button type="submit" class="btn btn-small orange waves-effect">
                                 <i class="material-icons left">local_library</i>
                                 @if($message->status)
-                                    <span>Unread</span>
+                                    <span>Necitit</span>
                                 @else 
-                                    <span>Read</span>
+                                    <span>Citit</span>
                                 @endif
                             </button>
                         </form>

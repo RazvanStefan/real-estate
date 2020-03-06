@@ -12,11 +12,11 @@
 
                 <div class="col s12 m8">
                     <div class="contact-content">
-                        <h4 class="contact-title">Contact Us</h4>
+                        <h4 class="contact-title">Contact</h4>
 
                         <form id="contact-us" action="" method="POST">
                             @csrf
-                            <input type="hidden" name="mailto" value="{{ $contactsettings[0]['email'] ?? 'razvan.stefan994@gmail.com' }}">
+                            <input type="hidden" name="mailto" value="{{ $contactsettings[0]['email'] ?? 'email_de_actualizat' }}">
 
                             @auth
                                 <input type="hidden" name="user_id" value="{{ auth()->id() }}">
@@ -26,14 +26,14 @@
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">person</i>
                                     <input id="name" name="name" type="text" class="validate" value="{{ auth()->user()->name }}" readonly>
-                                    <label for="name">Name</label>
+                                    <label for="name">Nume</label>
                                 </div>
                             @endauth
                             @guest
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">person</i>
                                     <input id="name" name="name" type="text" class="validate">
-                                    <label for="name">Name</label>
+                                    <label for="name">Nume</label>
                                 </div>
                             @endguest
 
@@ -55,17 +55,17 @@
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">phone</i>
                                 <input id="phone" name="phone" type="number" class="validate">
-                                <label for="phone">Phone</label>
+                                <label for="phone">Telefon</label>
                             </div>
 
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">mode_edit</i>
                                 <textarea id="message" name="message" class="materialize-textarea"></textarea>
-                                <label for="message">Message</label>
+                                <label for="message">Mesaj</label>
                             </div>
                             
                             <button id="msgsubmitbtn" class="btn waves-effect waves-light indigo darken-4 btn-large" type="submit">
-                                <span>SEND</span>
+                                <span>TRIMITE</span>
                                 <i class="material-icons right">send</i>
                             </button>
 
@@ -78,21 +78,21 @@
                     <div class="contact-sidebar">
                         <div class="m-t-30">
                             <i class="material-icons left">call</i>
-                            <h6 class="uppercase">Call us Now</h6>
+                            <h6 class="uppercase">Telefon:</h6>
                             @if(isset($contactsettings[0]) && $contactsettings[0]['phone'])
                                 <h6 class="bold m-l-40">{{ $contactsettings[0]['phone'] }}</h6>
                             @endif
                         </div>
                         <div class="m-t-30">
                             <i class="material-icons left">mail</i>
-                            <h6 class="uppercase">Email Address</h6>
+                            <h6 class="uppercase">Email de contact</h6>
                             @if(isset($contactsettings[0]) && $contactsettings[0]['email'])
                                 <h6 class="bold m-l-40">{{ $contactsettings[0]['email'] }}</h6>
                             @endif
                         </div>
                         <div class="m-t-30">
                             <i class="material-icons left">map</i>
-                            <h6 class="uppercase">Address</h6>
+                            <h6 class="uppercase">Adresa</h6>
                             @if(isset($contactsettings[0]) && $contactsettings[0]['address'])
                                 <h6 class="bold m-l-40">{!! $contactsettings[0]['address'] !!}</h6>
                             @endif

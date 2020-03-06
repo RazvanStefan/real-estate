@@ -19,7 +19,7 @@
             <div class="card">
                 <div class="header bg-indigo">
                     <h2>
-                        GALLERY IMAGE
+                        GALERIE
                         <a href="{{ route('admin.album') }}" class="right" title="Back"><i class="material-icons">undo</i></a>
                     </h2>
                 </div>
@@ -40,7 +40,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>UPLOAD GALLERY IMAGE</h2>
+                    <h2>ADAUGA IMEGINI</h2>
                 </div>
                 <div class="body">
                     <form action="{{route('admin.galleries.store')}}" method="POST" id="frmFileUpload" class="dropzone">
