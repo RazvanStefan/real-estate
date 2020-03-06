@@ -6,7 +6,7 @@
         <div class="col s12 m6 offset-m3">
             <div class="card">
 
-                <h4 class="center indigo-text uppercase p-t-30">{{ __('Login') }}</h4>
+                <h4 class="center indigo-text uppercase p-t-30">{{ __('Autentificare') }}</h4>
 
                 <div class="p-20">
                     <form method="POST" action="{{ route('login') }}">
@@ -14,7 +14,7 @@
 
                         <div class="row">
                             <div class="input-field col s12">
-                                <label for="email">{{ __('E-Mail Address') }}</label>
+                                <label for="email">{{ __('E-Mail') }}</label>
                                 <input id="email" type="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -27,7 +27,7 @@
 
                         <div class="row">
                             <div class="input-field col s12">
-                                <label for="password">{{ __('Password') }}</label>
+                                <label for="password">{{ __('Parola') }}</label>
                                 <input id="password" type="password" class="{{ $errors->has('password') ? 'is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -41,18 +41,18 @@
                         <p>
                             <label>
                                 <input type="checkbox" name="remember" class="filled-in" {{ old('remember') ? 'checked' : '' }} />
-                                <span>{{ __('Remember Me') }}</span>
+                                <span>{{ __('Tine-ma conectat') }}</span>
                             </label>
                         </p>
 
                         <div class="row">
                             <div class="input-field col s12">
                                 <button type="submit" class="waves-effect waves-light btn indigo">
-                                    {{ __('Login') }}
+                                    {{ __('Autentificare') }}
                                 </button>
 
                                 <a class="indigo-text p-l-15" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('Parola uitate?') }}
                                 </a>
                             </div>
                         </div>
