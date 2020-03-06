@@ -15,15 +15,15 @@
                 
                 <ul class="right hide-on-med-and-down">
                     <li class="{{ Request::is('/') ? 'active' : '' }}">
-                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('home') }}">Acasa</a>
                     </li>
 
                     <li class="{{ Request::is('property*') ? 'active' : '' }}">
-                        <a href="{{ route('property') }}">Properties</a>
+                        <a href="{{ route('property') }}">Anunturi</a>
                     </li>
 
                     <li class="{{ Request::is('agents*') ? 'active' : '' }}">
-                        <a href="{{ route('agents') }}">Agents</a>
+                        <a href="{{ route('agents') }}">Agenti</a>
                     </li>
 <!--
                     <li class="{{ Request::is('gallery') ? 'active' : '' }}">
@@ -49,15 +49,15 @@
                             <li>
                                 @if(Auth::user()->role->id == 1)
                                     <a href="{{ route('admin.dashboard') }}" class="indigo-text">
-                                        <i class="material-icons">person</i>Profile
+                                        <i class="material-icons">person</i>Profil
                                     </a>
                                 @elseif(Auth::user()->role->id == 2)
                                     <a href="{{ route('agent.dashboard') }}" class="indigo-text">
-                                        <i class="material-icons">person</i>Profile
+                                        <i class="material-icons">person</i>Profil
                                     </a>
                                 @elseif(Auth::user()->role->id == 3)
                                     <a href="{{ route('user.dashboard') }}" class="indigo-text">
-                                        <i class="material-icons">person</i>Profile
+                                        <i class="material-icons">person</i>Profil
                                     </a>
                                 @endif
                             </li>
@@ -65,7 +65,7 @@
                                 <a class="dropdownitem indigo-text" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                    <i class="material-icons">power_settings_new</i>{{ __('Logout') }}
+                                    <i class="material-icons">power_settings_new</i>{{ __('Deconectare') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -82,15 +82,15 @@
     
     <ul class="sidenav" id="mobile-demo">
         <li class="{{ Request::is('/') ? 'active' : '' }}">
-            <a href="{{ route('home') }}">Home</a>
+            <a href="{{ route('home') }}">Acasa</a>
         </li>
 
         <li class="{{ Request::is('property*') ? 'active' : '' }}">
-            <a href="{{ route('property') }}">Properties</a>
+            <a href="{{ route('property') }}">Anunturi</a>
         </li>
 
         <li class="{{ Request::is('agents*') ? 'active' : '' }}">
-            <a href="{{ route('agents') }}">Agents</a>
+            <a href="{{ route('agents') }}">Agenti</a>
         </li>
 
         <li class="{{ Request::is('contact') ? 'active' : '' }}">
@@ -104,15 +104,15 @@
             <li>
                 @if(Auth::user()->role->id == 1)
                     <a href="{{ route('admin.dashboard') }}" class="indigo-text">
-                        <i class="material-icons">person</i>Profile
+                        <i class="material-icons">person</i>Profil
                     </a>
                 @elseif(Auth::user()->role->id == 2)
                     <a href="{{ route('agent.dashboard') }}" class="indigo-text">
-                        <i class="material-icons">person</i>Profile
+                        <i class="material-icons">person</i>Profil
                     </a>
                 @elseif(Auth::user()->role->id == 3)
                     <a href="{{ route('user.dashboard') }}" class="indigo-text">
-                        <i class="material-icons">person</i>Profile
+                        <i class="material-icons">person</i>Profil
                     </a>
                 @endif
             </li>
@@ -120,7 +120,7 @@
                 <a class="dropdownitem indigo-text" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                <i class="material-icons">power_settings_new</i>{{ __('Logout') }}
+                <i class="material-icons">power_settings_new</i>{{ __('Deconectare') }}
             </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
