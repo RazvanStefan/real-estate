@@ -90,12 +90,12 @@ class DashboardController extends Controller
     {
         if (!(Hash::check($request->get('currentpassword'), Auth::user()->password))) {
 
-            Toastr::error('message', 'Your current password does not matches with the password you provided! Please try again.');
+            Toastr::error('message', 'Parola curenta este invalida! Va rugam reincercati!');
             return redirect()->back();
         }
         if(strcmp($request->get('currentpassword'), $request->get('newpassword')) == 0){
 
-            Toastr::error('message', 'New Password cannot be same as your current password! Please choose a different password.');
+            Toastr::error('message', 'Noua parola nu poate coincide cu cea veche! Va rugam reincercati!');
             return redirect()->back();
         }
 
@@ -148,7 +148,7 @@ class DashboardController extends Controller
 
         Message::create($request->all());
 
-        Toastr::success('message', 'Message send successfully.');
+        Toastr::success('message', 'Mesaj trimis!');
         return back();
 
     }
@@ -176,7 +176,7 @@ class DashboardController extends Controller
         $message = Message::findOrFail($id);
         $message->delete();
 
-        Toastr::success('message', 'Message deleted successfully.');
+        Toastr::success('message', 'Mesaj sters!');
         return back();
     }
 
