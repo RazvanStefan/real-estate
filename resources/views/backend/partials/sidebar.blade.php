@@ -4,7 +4,7 @@
         <div class="menu">
             <ul class="list">
 
-                <li class="header">MAIN NAVIGATION</li>
+                <li class="header"><!--MAIN NAVIGATION--></li>
                 
                 <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
                     <a href="{{ route('admin.dashboard') }}">
@@ -21,20 +21,20 @@
                 <li class="{{ Request::is('admin/properties*') ? 'active' : '' }}">
                     <a href="{{ route('admin.properties.index') }}">
                         <i class="material-icons">home</i>
-                        <span>Property</span>
+                        <span>Anunturi</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/features*') ? 'active' : '' }}">
                     <a href="{{ route('admin.features.index') }}">
                         <i class="material-icons">star</i>
-                        <span>Features</span>
+                        <span>Utilitati</span>
                     </a>
                 </li>
 
                 <li class="{{ Request::is('admin/services*') ? 'active' : '' }}">
                     <a href="{{ route('admin.services.index') }}">
                         <i class="material-icons">wb_sunny</i>
-                        <span>Services</span>
+                        <span>Servicii</span>
                     </a>
                 </li>
 
@@ -49,19 +49,19 @@
                 <li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
                     <a href="{{ route('admin.categories.index') }}">
                         <i class="material-icons">category</i>
-                        <span>Categories</span>
+                        <span>Categorii</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/tags*') ? 'active' : '' }}">
                     <a href="{{ route('admin.tags.index') }}">
                         <i class="material-icons">label</i>
-                        <span>Tags</span>
+                        <span>Taguri</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/posts*') ? 'active' : '' }}">
                     <a href="{{ route('admin.posts.index') }}">
                         <i class="material-icons">library_books</i>
-                        <span>Posts</span>
+                        <span>Postari</span>
                     </a>
                 </li>
 
