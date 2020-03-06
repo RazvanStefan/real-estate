@@ -36,7 +36,7 @@ class TagController extends Controller
         $tag->slug = str_slug($request->name);
         $tag->save();
 
-        Toastr::success('message', 'Tag created successfully.');
+        Toastr::success('message', 'Tag creat!');
         return redirect()->route('admin.tags.index');
     }
 
@@ -66,7 +66,7 @@ class TagController extends Controller
         $tag->slug = str_slug($request->name);
         $tag->save();
 
-        Toastr::success('message', 'Tag updated successfully.');
+        Toastr::success('message', 'Tag actualizat!');
         return redirect()->route('admin.tags.index');
     }
 
@@ -77,7 +77,7 @@ class TagController extends Controller
         $tag->delete();
         $tag->posts()->detach();
 
-        Toastr::success('message', 'Tag deleted successfully.');
+        Toastr::success('message', 'Tag sters!');
         return back();
     }
 }
