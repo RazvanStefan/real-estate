@@ -15,10 +15,10 @@
             <div class="card">
                 <div class="header bg-indigo">
                     <h2>
-                        EDIT SLIDER
+                        EDITEAZA SLIDER
                         <a href="{{route('admin.sliders.index')}}" class="waves-effect waves-light btn right headerightbtn">
                             <i class="material-icons left">arrow_back</i>
-                            <span>BACK</span>
+                            <span>INAPOI</span>
                         </a>
                     </h2>
                 </div>
@@ -43,12 +43,12 @@
                             <input type="file" name="image" id="slider-image-input-edit" style="display:none;">
                             <button type="button" class="btn bg-grey btn-sm waves-effect m-t-15" id="slider-image-btn-edit">
                                 <i class="material-icons">image</i>
-                                <span>UPLOAD IMAGE</span>
+                                <span>INCARCA IMAGINE</span>
                             </button>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Description</label>
+                            <label class="form-label">Descriere</label>
                             <div class="form-line">
                                 <textarea name="description" rows="4" class="form-control no-resize">{{$slider->description}}</textarea>
                             </div>
@@ -56,7 +56,7 @@
 
                         <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                             <i class="material-icons">update</i>
-                            <span>Update</span>
+                            <span>ACTUALIZEAZA</span>
                         </button>
 
                     </form>
