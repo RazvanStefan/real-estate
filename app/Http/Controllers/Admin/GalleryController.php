@@ -71,7 +71,7 @@ class GalleryController extends Controller
             ]);
         }
 
-        Toastr::success('message', 'Images uploaded successfully.');
+        Toastr::success('message', 'Imagini adaugate!');
 
         return back();
     }
