@@ -20,14 +20,14 @@
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>EDIT POST</h2>
+                    <h2>EDITEAZA POSTARE</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" name="title" class="form-control" value="{{$post->title}}">
-                            <label class="form-label">Post Title</label>
+                            <label class="form-label">Titlu</label>
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>SELECT CATEGORY</h2>
+                    <h2>SELECTEAZA CATEGORIE</h2>
                 </div>
                 <div class="body">
 
@@ -73,7 +73,7 @@
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('tags') ? 'focused error' : ''}}">
-                            <label for="tags">Select Tag</label>
+                            <label for="tags">Selecteaza tag</label>
                             <select name="tags[]" class="form-control show-tick" id="tags" multiple data-live-search="true">
                                 @foreach($tags as $tag)
                                     <option value="{{$tag->id}}">{{$tag->name}}</option>
@@ -90,12 +90,12 @@
 
                     <a href="{{route('admin.posts.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>INAPOI</span>
                     </a>
 
                     <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                         <i class="material-icons">save</i>
-                        <span>UPDATE</span>
+                        <span>ACTUALIZEAZA</span>
                     </button>
 
                 </div>
