@@ -36,7 +36,7 @@ class FeatureController extends Controller
         $tag->slug = str_slug($request->name);
         $tag->save();
 
-        Toastr::success('message', 'Feature created successfully.');
+        Toastr::success('message', 'Utilitate adaugata!');
         return redirect()->route('admin.features.index');
     }
 
@@ -60,7 +60,7 @@ class FeatureController extends Controller
         $feature->slug = str_slug($request->name);
         $feature->save();
 
-        Toastr::success('message', 'Feature updated successfully.');
+        Toastr::success('message', 'Utilitate actualizata!');
         return redirect()->route('admin.features.index');
     }
 
@@ -71,7 +71,7 @@ class FeatureController extends Controller
         $feature->delete();
         $feature->features()->detach();
 
-        Toastr::success('message', 'Feature deleted successfully.');
+        Toastr::success('message', 'Utilitate stearsa!');
         return back();
     }
 }
