@@ -17,17 +17,17 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">MESSAGES</h4>
+                    <h4 class="agent-title">MESAJE</h4>
                     
                     <div class="agent-content">
                         <table class="striped responsive-table">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Name</th>
+                                    <th>#</th>
+                                    <th>Nume</th>
                                     <th>Email</th>
-                                    <th>Message</th>
-                                    <th>Action</th>
+                                    <th>Mesaj</th>
+                                    <th>Actiuni</th>
                                 </tr>
                             </thead>
                     
@@ -85,18 +85,18 @@
     <script>
         function deleteMessage(id){
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Sunteti sigur?',
+            text: "Aceasta actiune este ireversibila!",
             icon: 'warning',
             buttons: true,
             dangerMode: true,
-            buttons: ["Cancel", "Yes, delete it!"]
+            buttons: ["Anuleaza", "Sterge"]
             }).then((value) => {
                 if (value) {
                     document.getElementById('del-message-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Message has been deleted.',
+                    'Sters!',
+                    'Mesaj sters!',
                     'success',
                     {
                         buttons: false,
