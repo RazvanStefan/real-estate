@@ -21,56 +21,56 @@
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>Edit PROPERTY</h2>
+                    <h2>Modifica anunt</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" name="title" class="form-control" value="{{$property->title}}">
-                            <label class="form-label">Property Title</label>
+                            <label class="form-label">Titlu</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" name="price" class="form-control" value="{{$property->price}}" required>
-                            <label class="form-label">Price</label>
+                            <label class="form-label">Pret</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bedroom" value="{{$property->bedroom}}" required>
-                            <label class="form-label">Bedroom</label>
+                            <label class="form-label">Bai</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bathroom" value="{{$property->bathroom}}" required>
-                            <label class="form-label">Bathroom</label>
+                            <label class="form-label">Camere</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="city" value="{{$property->city}}" required>
-                            <label class="form-label">City</label>
+                            <label class="form-label">Oras</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="address" value="{{$property->address}}" required>
-                            <label class="form-label">Address</label>
+                            <label class="form-label">Adresa</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="area" value="{{$property->area}}" required>
-                            <label class="form-label">Area</label>
+                            <label class="form-label">Suprafata</label>
                         </div>
                         <div class="help-info">mp</div>
                     </div>
@@ -91,18 +91,18 @@
 
                     <div class="form-group">
                         <input type="checkbox" id="featured" name="featured" class="filled-in" value="1" {{ $property->featured ? 'checked' : '' }}/>
-                        <label for="featured">Featured</label>
+                        <label for="featured">Utilitati</label>
                     </div>
 
                     <hr>
                     <div class="form-group">
-                        <label for="tinymce">Description</label>
+                        <label for="tinymce">Descriere</label>
                         <textarea name="description" id="tinymce">{{$property->description}}</textarea>
                     </div>
 
                     <hr>
                     <div class="form-group">
-                        <label for="tinymce-nearby">Nearby</label>
+                        <label for="tinymce-nearby">Vecinatati</label>
                         <textarea name="nearby" id="tinymce-nearby">{{$property->nearby}}</textarea>
                     </div>
 
@@ -111,7 +111,7 @@
 
             <div class="card">
                 <div class="header bg-red">
-                    <h2>GALLERY IMAGE</h2>
+                    <h2>GALERIE</h2>
                 </div>
                 <div class="body">
                     <div class="gallery-box" id="gallerybox">
@@ -125,7 +125,7 @@
                     <div class="gallery-box">
                         <hr>
                         <input type="file" name="gallaryimage[]" value="UPLOAD" id="gallaryimageupload" multiple>
-                        <button type="button" class="btn btn-info btn-lg right" id="galleryuploadbutton">UPLOAD GALLERY IMAGE</button>
+                        <button type="button" class="btn btn-info btn-lg right" id="galleryuploadbutton">ADAUGA IMAGINI</button>
                     </div>
                 </div>
             </div>
@@ -134,15 +134,15 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>SELECT</h2>
+                    <h2>SELECTEAZA</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('purpose') ? 'focused error' : ''}}">
-                            <label>Select Purpose</label>
+                            <label>Vanzare/Inchiriere</label>
                             <select name="purpose" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
+                                <option value="">-- Vanzare/Inchiriere --</option>
                                 <option value="sale" {{ $property->purpose=='sale' ? 'selected' : '' }}>Sale</option>
                                 <option value="rent" {{ $property->purpose=='rent' ? 'selected' : '' }}>Rent</option>
                             </select>
@@ -153,7 +153,7 @@
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
                             <label>Select type</label>
                             <select name="type" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
+                                <option value="">-- Casa/Apartament --</option>
                                 <option value="house" {{ $property->type=='house' ? 'selected' : '' }}>House</option>
                                 <option value="apartment" {{ $property->type=='apartment' ? 'selected' : '' }}>Apartment</option>
                             </select>
@@ -193,7 +193,7 @@
 
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>PROPERTY VIDEO</h2>
+                    <h2>VIDEO</h2>
                 </div>
                 <div class="body">
                     <div class="form-group form-float">
@@ -211,7 +211,7 @@
 
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FLOOR PLAN</h2>
+                    <h2>SCHITA ETAJULUI</h2>
                 </div>
                 <div class="body">
                     <div class="form-group">
@@ -225,7 +225,7 @@
 
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>IMAGINE DE COPERTA</h2>
                 </div>
                 <div class="body">
 
@@ -239,12 +239,12 @@
                     {{-- BUTTON --}}
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>INAPOI</span>
                     </a>
 
                     <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                         <i class="material-icons">save</i>
-                        <span>SAVE</span>
+                        <span>SALVEAZA</span>
                     </button>
 
                 </div>
